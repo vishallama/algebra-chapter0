@@ -8,3 +8,26 @@ contradiction. This is Russell's paradox. Either we assume the \emph{set of all
 sets} doesn't exist, or we need to give up the axiom of \emph{unrestricted
 comprehension} in set theory.
 \end{xca}
+
+\begin{xca}
+Suppose $\sim$ is an equivalence relation on a set $S$. For every element $a \in
+S$, define the \emph{equivalence class} of $a$ (with respect to $\sim$) by
+\begin{center}
+$[a]_{\sim} := \{ b \in S \mid b \sim a \}$.
+\end{center}
+Then, we note that due to \emph{reflexivity}, the equivalence class
+$[a]_{\sim}$ of every element $a \in S$ contains $a$, and hence, is nonempty.
+Also, $[a]_{\sim} \subset S$, and therefore, $\bigcup_{a \in S} [a]_{\sim} =
+S$. Finally, we show the equivalence classes are mutually disjoint. Indeed, for
+any two elements $a, b \in S$, if $[a]_{\sim}$ and $[b]_{\sim}$ are disjoint,
+then there is nothing to prove. So, suppose $[a]_{\sim} \cap [b]_{\sim}$ is
+nonempty. Then, there exists some $c \in S$ that belongs to such an
+intersection. Thus, $c \sim a$ and $c \sim b$. By symmetry, $a \sim c$, and
+thus, by transitivity, $a \sim b$, which by symmetry again, implies $b \sim a$.
+Therefore, for all $x \in [a]_{\sim}$, we have $x \sim a$, and since $a \sim
+b$, by transitivity, $x \sim b$, which implies $x \in [b]_{\sim}$, from which
+we conclude $[a]_{\sim} \subset [b]_{\sim}$. We can similarly show $[b]_{\sim}
+\subset [a]_{\sim}$. Hence, $[a]_{\sim} = [b]_{\sim}$. This establishes
+equivalence classes are mutually disjoint. Hence, the set $\mathscr{P}_{\sim}$
+of equivalence classes of $S$ is indeed a partition of $S$.
+\end{xca}
