@@ -1,0 +1,90 @@
+% Document type
+\documentclass[]{amsbook}
+%----------------------------------------------------------
+% Packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[pdftex, bookmarks, colorlinks=true]{hyperref}
+\usepackage{tikz-cd}
+\usepackage{bbm}
+%----------------------------------------------------------
+% User-defined environments
+\theoremstyle{plain}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{case}{Case}[section]
+\newtheorem{claim}{Claim}[section]
+\newtheorem{conclusion}{Conclusion}[section]
+\newtheorem{condition}{Condition}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{solution}{Solution}[section]
+\newtheorem{summary}{Summary}[section]
+\newtheorem{theorem}{Theorem}[section]
+\numberwithin{equation}{section}
+
+\theoremstyle{definition}
+\newtheorem{xca}{Exercise}[section]
+%-----------------------------------------------------------
+% User-defined commands
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\dps}{\displaystyle}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mf}[1]{\mathfrak}
+\newcommand{\mc}[1]{\mathcal}
+\newcommand{\opn}[1]{\operatorname{#1}}
+\newcommand{\tb}[1]{\textbf}
+
+\newcommand{\catname}[1]{\mathbf{#1}}
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\1}{\mathbf{1}}
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\newcommand{\q}{\quad}
+\newcommand{\qq}{\quad \quad}
+\newcommand{\qqq}{\quad \quad \quad}
+
+\newcommand{\oldemptyset}{\emptyset}
+\renewcommand{\emptyset}{\varnothing}
+%-----------------------------------------------------------
+\begin{document}
+\frontmatter
+\title[`Algebra: Chapter 0']{Solutions to Exercises from `Algebra: Chapter 0'}
+
+\begin{abstract}
+Solutions to exercises from the book `Algebra: Chapter 0' by Paolo Aluffi.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+\chapter*{Preface}
+
+\markboth{PREFACE}{PREFACE} This document contains my attempt at writing
+(hopefully correct!) solutions to exercises from Aluffi's book, while engaging
+in some self-study of modern abstract algebra with the ultimate aim of teaching
+myself some modern algebraic geometry.
+\mainmatter
+
+\include{chapters/set-theory-and-categories}
+
+\end{document}
