@@ -61,3 +61,38 @@ $R = \{ (1,1), (2,2), (3,3), (1,2), (2,1), (2,3), (3,2) \}$, where
 $S = \{ 1,2,3 \}$.
 \end{center}
 \end{xca}
+
+\begin{xca}
+Define a relation $\sim$ on the set $\R$ of real numbers by setting
+\begin{center}
+ $a \sim b \iff b - a \in \mathbb{Z}$.
+\end{center}
+We claim $\sim$ is an equivalence relation. To that end, note, for all $a \in
+\R$, we have $a \sim a$, since $a - a = 0 \in \Z$. Therefore, $\sim$ is
+reflexive. Also, if $a \sim b$, then $b - a \in \Z$, which implies $a - b \in
+\Z$, and thus, $b \sim a$. Therefore, $\sim$ is symmetric. Finally, suppose $a
+\sim b$ and $b \sim c$. Then, $b - a, c - b \in \Z$, and thus, $c - a = (c - b)
++ (b - a) \in \Z$. Thus, $\sim$ is transitive. Therefore, $\sim$ is an
+equivalence relation on $\R$.
+
+(Description of $\sim$) Note all reals that have the same decimal expansion
+belong to the same equivalence class under $\sim$. Thus, $[0]_{\sim} = \Z$, and
+for any $0 < \alpha < 1, [\alpha]_{\sim} = \{ n + \alpha \mid n \in \Z \}$. This
+takes care of all the reals, since each real can always be written as $n +
+\alpha$, for some $n \in \Z$ and $0 < \alpha < 1$. Therefore, a `compelling'
+description for $\R/{\sim}$ is the unit interval $[0,1]$, such that the
+endpoints, $0$ and $1$, are `glued' together. In other words, it is a `loop'
+or a 1-sphere.\\
+
+Define a relation $\approx$ on the plane $\R \times \R$ as follows:
+\begin{center}
+$(a_1, a_2) \approx (b_1, b_2) \iff b_1 - a_1 \in \Z \text{ and }
+b_2 - a_2 \in \Z$.
+\end{center}
+Then, just as above, it is easy to show $\approx$ defines an equivalence
+relation on $\R \times \R$. We note $[(0,0)]_{\sim} = \{ (m,n) \mid m,n \in \Z
+\}$, and for any $0 < \alpha, \beta < 1, [(\alpha, \beta)]_{\sim} = \{ (m +
+\alpha, n + \beta) \mid m,n \in \Z \}$. Thus, a `compelling' description of $\R
+\times \R/{\approx}$ is the unit square $[0,1] \times [0,1]$ with the four
+corners joined together, so that it forms a 2-sphere.
+\end{xca}
