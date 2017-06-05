@@ -123,3 +123,17 @@ $a \in f^{-1}(b)$. Hence, for all $b \in B, (f \circ g) (b) = f(g(b)) = f(a) =
 b = 1_{B} (b)$, and so, $f \circ g = 1_B$. This establishes $g$ is the right
 inverse of $f$, and we are done.
 \end{xca}
+
+\begin{xca}
+Suppose $f : A \to B$ is a bijection. Then, $f$ has an inverse $f^{-1}: B \to A$
+such that $f^{-1} \circ f = 1_A$ and $f \circ f^{-1} = 1_B$. Clearly, $f$ is an
+inverse of $f^{-1}$, showing $f^{-1}$ is also a bijection.
+
+Suppose $f: A \to B$ and $g: B \to C$ are bijections. We claim $g \circ f: A \to
+C$ is also a bijection. To that end, we show $f^{-1} \circ g^{-1}: C \to A$ is
+the inverse of $g \circ f$. Indeed, $(g \circ f) \circ (f^{-1} \circ g^{-1}) =
+g \circ (f \circ f^{-1}) \circ g^{-1} = g \circ 1_B \circ g^{-1} = g \circ
+g^{-1} = 1_C$. And, $(f^{-1} \circ g^{-1}) \circ (g \circ f) = f^{-1} \circ
+(g^{-1} \circ g) \circ f = f^{-1} \circ 1_B \circ f = f^{-1} \circ f = 1_A$,
+and we are done.
+\end{xca}
