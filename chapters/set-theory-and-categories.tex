@@ -205,3 +205,20 @@ Then, for all $a \in A$, $(\pi_A \circ g)(a) = \pi_A(g(a)) = \pi_A(a, f(a)) =
 a = 1_A(a)$, which implies $\pi_A \circ g = 1_A$, thereby showing $g$ as
 defined above is indeed a section of $\pi_A$.
 \end{xca}
+
+\begin{xca}
+Let $f: A \to B$ by any function. We show the graph $\Gamma_f$ of $f$ is
+isomorphic to $A$. First, recall the definition of $\Gamma_f$:
+\begin{center}
+    $\Gamma_f := \{ (a, b) \in (A, B) \mid b = f(a) \} \subseteq A \times B$.
+\end{center}
+We define a function $g: A \to \Gamma_f$ by
+\begin{center}
+    $a \mapsto (a, f(a))$.
+\end{center}
+Then, for any $(a, b) \in \Gamma_f$, we have $b = f(a)$, which implies $g(a) =
+(a, f(a)) = (a, b)$, proving $g$ is surjective. Next, for any $a', a'' \in A$,
+suppose $g(a') = g(a'')$. This implies $(a', f(a')) = (a'', f(a''))$, which
+implies $a' = a''$, thus proving $g$ is injective. Hence, $g$ is an isomorphism,
+and so, $A \cong \Gamma_f$.
+\end{xca}
