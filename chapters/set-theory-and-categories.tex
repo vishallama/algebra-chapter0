@@ -137,3 +137,17 @@ g^{-1} = 1_C$. And, $(f^{-1} \circ g^{-1}) \circ (g \circ f) = f^{-1} \circ
 (g^{-1} \circ g) \circ f = f^{-1} \circ 1_B \circ f = f^{-1} \circ f = 1_A$,
 and we are done.
 \end{xca}
+
+\begin{xca}
+We show `isomorphism' is an equivalence relation on any set of sets.\\
+(Reflexivity) For all sets $A, 1_A : A \to A$ is a natural bijection, and thus,
+$A \cong A$.\\
+(Symmetry) Suppose $A \cong B$ for any two sets $A, B$. Then,
+there exists a bijection $f : A \to B$, such that its inverse $f^{-1} : B \to
+A$ is also a bijection (as shown in the above exercise.) Thus, $B \cong A$.\\
+(Transitivity) Finally, suppose for any three sets, $A, B$ and $C$, $A \cong B$
+and $B \cong C$, with $f : A \to B$ and $g: B \to C$ as bijections. Then, from
+the previous exercise, $g \circ f : A \to C$ is also a bijection, and thus $A
+\cong C$.\\
+Thus, our original claim is established.
+\end{xca}
