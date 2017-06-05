@@ -106,3 +106,20 @@ remaining $n-1$ elements in $S$, and so on, with the last element in $S$ being
 mapped to the last remaining element in $S$. Thus, the number of bijections
 equals $n \cdot (n-1) \cdot \ldots \cdot 1 = n!$, which proves our claim.
 \end{xca}
+
+\begin{xca}
+Assume $A \neq \emptyset$, and let $f: A \to B$ be a function. We claim $f$ has
+a right inverse iff it is surjective.
+
+($\impliedby$) Suppose $f$ has a right inverse, $g: B \to A$, say. Then,
+$f \circ g = 1_B$. Thus, for all $b \in B$, $b = 1_B(b) = (f \circ g)(b) =
+f(g(b)) = f(a)$, where $g(b) = a \in A$. This shows $f$ is surjective.
+
+($\implies$) Suppose $f$ is surjective. Then, for any $b \in B$, the fiber of
+$f$ over $b$ is nonempty. Thus, $\{ f^{-1}(b) \}_{b \in B}$ is a family of
+nonempty sets, and therefore, using the \emph{axiom of choice}, we can construct
+a function $g : B \to A$ as follows: For all $b \in B$, $g(b) = a$ for some
+$a \in f^{-1}(b)$. Hence, for all $b \in B, (f \circ g) (b) = f(g(b)) = f(a) =
+b = 1_{B} (b)$, and so, $f \circ g = 1_B$. This establishes $g$ is the right
+inverse of $f$, and we are done.
+\end{xca}
