@@ -151,3 +151,46 @@ the previous exercise, $g \circ f : A \to C$ is also a bijection, and thus $A
 \cong C$.\\
 Thus, our original claim is established.
 \end{xca}
+
+\begin{xca}
+(\emph{\textbf{Epimorphism}}) A function $f : A \to B$ is an \emph{epimorphism}
+(or \emph{epi}) if the following holds: For all sets $Z$ and all functions
+$\alpha ', \alpha '' : B \to Z$,
+\begin{center}
+$\alpha ' \circ f = \alpha '' \circ f \Longrightarrow \alpha ' = \alpha ''$.
+\end{center}
+In other words, an epimorphism $f$ is \emph{right cancellative}.\\
+
+\emph{Proposition}: A function is surjective iff it is an epimorphism.
+
+\emph{Proof}. ($\implies$) Suppose $f: A \to B$ is an epimorphism. Assume, for
+the sake of contradiction, $f$ is \emph{not} surjective. Then, there exists an
+element $b_0 \in B$, such that, for all $a \in A$, $f(a) \neq b_0$. We now
+construct two distinct functions $\alpha', \alpha'' : B \to \{ 0, 1 \}$ as
+follows:
+\begin{center}
+\[
+\alpha'(b) = 0
+\]
+
+\[
+\alpha''(b) =
+    \begin{cases}
+        0 & \text{if } b \neq b_0 \\
+        1 & \text{if } b = b_0
+    \end{cases}
+\]
+\end{center}
+Then, it is easy to check that, for all $a \in A$,
+$(\alpha'' \circ f)(a) = \alpha''(f(a)) = 0 = \alpha'(f(a)) = (\alpha' \circ
+f)(a)$, which implies $\alpha' \circ f = \alpha'' \circ f$. However, $\alpha'
+\neq \alpha''$, which contradicts our assumption that $f$ is an epimorphism.
+Hence, we conclude $f$ is surjective.
+
+($\impliedby$) Suppose $f: A \to B$ is surjective. Then, it has a right inverse
+$g: B \to A$ such that $f \circ g = 1_B$. Now, assume, for any set $Z$ and any
+two functions $\alpha', \alpha'': B \to Z$, $\alpha' \circ f = \alpha'' \circ
+f$. Then, $\alpha' = \alpha' \circ 1_B = \alpha' \circ (f \circ g) = (\alpha'
+\circ f) \circ g = (\alpha'' \circ f) \circ g = \alpha'' \circ (f \circ g) =
+\alpha'' \circ 1_B = \alpha''$, thus proving $f$ is an epimorphism.
+\end{xca}
