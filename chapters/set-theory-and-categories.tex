@@ -262,3 +262,36 @@ decomposition of $f: \R \to \C$ is as shown below:
 \]
 where $\R/{\sim}$ is a `loop' (1-sphere.)
 \end{xca}
+
+\begin{xca}
+Suppose $A' \cong A''$ and $B' \cong B''$, and further $A' \cap B' = \emptyset$
+and $A'' \cap B'' = \emptyset$. Then, there exist isomorphisms $f: A' \to A''$
+and $g: B' \to B''$. Define a piecewise function $h: A' \cup B' \to A'' \cup
+ B''$ as follows:
+\[
+    h(x) =
+    \begin{cases}
+        f(x) & \text{if } x \in A' \\
+        g(x) & \text{if } x \in B'
+    \end{cases}
+\]
+We claim $h$ is an isomorphism. Indeed, let $y \in A'' \cup B''$. Since $A''$
+and $B''$ are disjoint, there are two cases to consider. Either, $y \in A''$,
+in which case, since $f$ is surjective there exists some $x_1 \in A'$ such that
+$f(x_1) = y$, which implies $h(x_1) = y$. Or, $y \in B''$, in which case, since
+$g$ is surjective there exists some $x_2 \in B'$ such that $g(x_2) = y$, which
+implies $h(x_2) = y$. Thus, in either case, $h$ maps some $x \in A' \cup B'$ to
+$y \in A'' \cup B''$, thus showing $h$ is surjective.\\
+Now, suppose $h(x_1) = h(x_2)$ for any $x_1, x_2 \in A' \cup B'$. There are
+three cases to consider. First, if both $x_1, x_2 \in A'$, then $f(x_1) =
+f(x_2)$, and since $f$ is injective, $x_1 = x_2$. Second, if both $x_1, x_2 \in
+B'$, then $g(x_1) = g(x_2)$, and since $g$ is injective, $x_1 = x_2$. Finally,
+without loss of generality, we can assume $x_1 \in A'$ and $x_2 \in B'$, which
+implies $f(x_1) = g(x_2)$, but this is impossible, since $f(x_1) \in A''$ and
+$f(x_2) \in B''$, but $A'', B''$ are disjoint. Thus, we conclude $h$ is
+injective.\\
+Hence, $h$ is an isomorphism.
+
+The above demonstrates the \emph{disjoint union} operation $A \amalg B$ for any
+two sets $A$ and $B$ is, indeed, well-defined \emph{up to isomorphism}.
+\end{xca}
