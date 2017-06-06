@@ -222,3 +222,43 @@ suppose $g(a') = g(a'')$. This implies $(a', f(a')) = (a'', f(a''))$, which
 implies $a' = a''$, thus proving $g$ is injective. Hence, $g$ is an isomorphism,
 and so, $A \cong \Gamma_f$.
 \end{xca}
+
+\begin{xca}
+We describe below explicitly all the terms in the canonical decomposition of the
+function $f: \R \to \C$ defined by
+\begin{center}
+    $r \mapsto e^{2\pi ir}$.
+\end{center}
+Note $f$ determines an equivalence relation $\sim$ on $\R$ as follows: For all
+$r', r'' \in \R$,
+\begin{center}
+    $r' \sim r'' \iff f(r') = f(r'')$.
+\end{center}
+Now, $f(r') = f(r'')$ whenever $e^{i2\pi r'} = e^{i2\pi r''}$, \emph{i.e.}
+$e^{i2\pi(r' - r'')} = e^0$; that is, $2\pi(r' - r'') = 2\pi k$, where $k \in
+\Z$. In other words, $f(r') = f(r'')$ iff $r' - r'' = k$, where $k \in \Z$.
+This implies
+\begin{center}
+    $r' \sim r'' \iff r' - r'' \in \Z$.
+\end{center}
+The above equivalence relation matches the one stated in Exercise 1.6 of
+Chapter 1. And, from the solution to the aforesaid exercise, we note that all
+equivalence classes are of the form $[\alpha]_{\sim}$, where $\alpha \in [0,
+1)$. Therefore, the isomorphism $\tilde{f}: \R/{\sim} \xrightarrow{\sim}
+\opn{im} f$ is defined by
+\begin{center}
+    $\tilde{f}(\alpha) = e^{2\pi i\alpha}, \, \alpha \in [0, 1)$.
+\end{center}
+Also, note $\opn{im} f$ is the unit circle on the complex plane. So, the entire
+decomposition of $f: \R \to \C$ is as shown below:
+\[
+\begin{tikzcd}
+    \R \arrow[r, two heads]
+       \arrow[rrr, bend left, "f"]
+       & \R/{\sim} \arrow[r, "\sim"]{r}[swap]{\tilde{f}}
+                   & \opn{im} f \arrow[r, hook]
+                                & \C
+\end{tikzcd},
+\]
+where $\R/{\sim}$ is a `loop' (1-sphere.)
+\end{xca}
