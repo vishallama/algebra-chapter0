@@ -311,3 +311,30 @@ consisting of all those elements of $A$ that are mapped to $1$ under such a
 function. Then, it is easy to check $f$ is both surjective and injective, and
 hence, a bijection.
 \end{xca}
+
+\section{Categories}
+\begin{xca}
+Let $\mc{C}$ be a category. Consider a structure $\mc{C}^{op}$ with
+\begin{itemize}
+    \item $\opn{Obj}(\mc{C}^{op}) := \opn{Obj}(\mc{C})$;
+    \item for $A, B$ objects of $\mc{C}^{op}$ (hence objects of $\mc{C}$),
+    $\Hom_{\mc{C}^{op}}(A, B) := \Hom_{\mc{C}}(B, A)$.
+\end{itemize}
+We can make $\mc{C}^{op}$ into a category as follows.
+\begin{itemize}
+    \item For every object $A$ of $\mc{C}^{op}$, its identity morphism in
+    $\mc{C}^{op}$ is defined as the identity morphism $1_A$ in $\mc{C}$.
+    \item For any two morphisms $f \in \Hom_{\mc{C}^{op}}(A, B)$ and $g \in
+    \Hom_{\mc{C}^{op}}(B, C)$, the composite $g \circ f \in
+    \Hom_{\mc{C}^{op}}(A, C)$ is defined as the composite $f \circ g$ in
+    $\mc{C}$.
+    \item Composition is associative in $\mc{C}^{op}$ is a direct consequence
+    of composition being associative in $\mc{C}$.
+    \item Identity morphisms in $\mc{C}^{op}$ are identities with respect to
+    composition is a direct consequence of identity morphisms in $\mc{C}$ being
+    identities with respect to composition.
+\end{itemize}
+The above construction, thus, shows $\mc{C}^{op}$ is a category. This
+\emph{\textbf{opposite category}} is simply obtained by `reversing all the
+arrows' in $\mc{C}$.
+\end{xca}
