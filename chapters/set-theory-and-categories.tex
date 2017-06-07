@@ -378,3 +378,52 @@ the other categories we have seen before. Objects of $\mathsf{V}$ are not like
 the usual sets or elements we have encountered so far, and its morphisms are
 matrices which are not the typical set-theoretic functions.
 \end{xca}
+
+\begin{xca}
+Let $\mc{C}$ be a category, and $A$ an object of $\mc{C}$. We define a category
+$\mc{C}^A$ as follows:
+\begin{itemize}
+    \item $\opn{Obj}(\mc{C}^A) :=$ collection of all morphisms from $A$ to any
+    object of $\mc{C}$; that is, an object of $\mc{C}^A$ is a morphism $f \in
+    \Hom_{\mc{C}}(A, B)$ for some object $B$ of $\mc{C}$.
+    \item For any two objects $f_1: A \to B$ and $f_2: A \to C$ of $\mc{C}^A$,
+    morphisms $f_1 \to f_2$ are defined to be commutative diagrams
+    \[
+    \begin{tikzcd}
+        & A \arrow[dl, swap, "f_1"]
+            \arrow[dr, "f_2"]
+            & \\
+            B \arrow[rr, swap, "\sigma"]
+              & & C
+    \end{tikzcd}
+    \]
+    in the `ambient' category $\mc{C}$. That is, morphisms $f_1 \to f_2$
+    correspond precisely to those morphisms $\sigma: B \to C$ in $\mc{C}$ such
+    that $\sigma \circ f_1 = f_2$.
+\end{itemize}
+
+(Composition) Two morphisms $f_1 \to f_2$ and $f_2 \to f_3$ in $\mc{C}^A$
+correspond to putting two commutative diagrams side-by-side:
+\[
+\begin{tikzcd}
+    & A \arrow[dl, swap, "f_1"]
+        \arrow[d, swap, "f_2"]
+        \arrow[dr, "f_3"]
+        & \\
+    B \arrow[r, swap, "\sigma"]
+      & C \arrow[r, swap, "\tau"]
+          & D
+\end{tikzcd}
+\]
+Then, the diagram obtained by removing the central arrow, \emph{i.e.}
+\[
+\begin{tikzcd}
+    & A \arrow[dl, swap, "f_1"]
+        \arrow[dr, "f_3"]
+        & \\
+    B \arrow[rr, swap, "\tau \circ \sigma"]
+      & & D
+\end{tikzcd}
+\]
+also commutes, since $\mc{C}$ is a category.
+\end{xca}
