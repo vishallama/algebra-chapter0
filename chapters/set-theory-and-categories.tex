@@ -452,3 +452,81 @@ Given any set $A$ in $\catname{Set}$, the subsets (subobjects) of $A$ are in a
 one-to-one correspondence with functions $A \to \{ 0, 1\}$. Thus, $\Omega =
 \{ 0, 1 \}$ is a \emph{subobject classifier} of $\catname{Set}$.
 \end{xca}
+
+\begin{xca}
+The category $\mc{C}^{A, B}$ consists of the following pieces of data:
+\begin{itemize}
+    \item $\opn{Obj}(\mc{C}^{A, B})$ = diagrams
+    \[
+    \begin{tikzcd}
+        A \arrow[rd, "f"] & \\
+        & Z \\
+        B \arrow[ru, swap, "g"]
+    \end{tikzcd}
+    \]
+    \item morphisms $(f_1: A \to Z_1, g_1: B \to Z_1) \to (f_2: A \to Z_2,
+    g_2: B \to Z_2)$ are commutative diagrams
+    \[
+    \begin{tikzcd}
+        A \arrow[rd, "f_1"]
+          \arrow[rrd, bend left, "f_2"]
+          & & \\
+        & Z_1 \arrow[r, swap, "\sigma"]
+              & Z_2 \\
+        B \arrow[ru, swap, "g_1"]
+          \arrow[rru, swap, bend right, "g_2"]
+          & &
+    \end{tikzcd}
+    \]
+    \item (Composition) Given commutative diagrams
+    \[
+    \begin{tikzcd}
+        A \arrow[rd, "f_1"]
+          \arrow[rrd, bend left, "f_2"]
+          \arrow[rrrd, bend left, "f_3"]
+          & & & \\
+        & Z_1 \arrow[r, swap, "\sigma"]
+              & Z_2 \arrow[r, swap, "\tau"]
+              & Z_3 \\
+        B \arrow[ru, swap, "g_1"]
+          \arrow[rru, swap, bend right, "g_2"]
+          \arrow[rrru, swap, bend right, "g_3"]
+          & & &
+    \end{tikzcd},
+    \]
+    the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        A \arrow[rd, "f_1"]
+        \arrow[rrd, bend left, "f_3"]
+        & & \\
+        & Z_1 \arrow[r, swap, "\tau \circ \sigma"]
+        & Z_2 \\
+        B \arrow[ru, swap, "g_1"]
+        \arrow[rru, swap, bend right, "g_3"]
+        & &
+    \end{tikzcd}
+    \]
+    \item (Identities) The identity morphism of
+    \[
+    \begin{tikzcd}
+        A \arrow[rd, "f"] & \\
+          & Z \\
+        B \arrow[ru, swap, "g"]
+    \end{tikzcd}
+    \]
+    is $Z \xrightarrow{1_Z} Z$, thus making the following diagram commute:
+    \[
+    \begin{tikzcd}
+        A \arrow[rd, "f_1"]
+          \arrow[rrd, bend left, "f_1"]
+          & & \\
+        & Z_1 \arrow[r, swap, "1_Z"]
+              & Z_1 \\
+        B \arrow[ru, swap, "f_2"]
+          \arrow[rru, swap, bend right, "f_2"]
+          & &
+        \end{tikzcd}
+    \]
+\end{itemize}
+\end{xca}
