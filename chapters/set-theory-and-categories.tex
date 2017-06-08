@@ -528,5 +528,38 @@ The category $\mc{C}^{A, B}$ consists of the following pieces of data:
           & &
         \end{tikzcd}
     \]
-\end{itemize}
+    \end{itemize}~\\
+
+    Given a category $\mc{C}$ and two fixed morphisms $\alpha: C \to A$ and
+    $\beta: C \to B$, the category $\mc{C}^{\alpha, \beta}$ consists of the
+    following pieces of data:
+    \begin{itemize}
+        \item $\opn{Obj}(\mc{C}^{\alpha, \beta})$ = commutative diagrams
+        \[
+        \begin{tikzcd}
+            & A \arrow[rd, "f"] & \\
+            C \arrow[ru, "\alpha"]
+              \arrow[rd, swap, "\beta"]
+              & & Z \\
+            & B \arrow[ru, swap, "g"] &
+        \end{tikzcd}
+        \]
+        in $\mc{C}$.
+        \item Morphisms correspond to commutative diagrams
+        \[
+        \begin{tikzcd}
+            & A \arrow[rd, "f_1"]
+                \arrow[rrd, bend left, "f_2"] & \\
+            C \arrow[ru, "\alpha"]
+              \arrow[rd, swap, "\beta"]
+              & & Z_1 \arrow[r, swap, "\sigma"]
+                      & Z_2 \\
+            & B \arrow[ru, swap, "g1"]
+                \arrow[rru, swap, bend right, "g_2"] &
+        \end{tikzcd}
+        \]
+        \item Composition and identities are defined in the obvious way.
+        \item The usual composition and identity laws for $\mc{C}^{\alpha,
+        \beta}$ follow from the composition and identity laws in $\mc{C}$.
+    \end{itemize}
 \end{xca}
