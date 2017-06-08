@@ -427,3 +427,18 @@ Then, the diagram obtained by removing the central arrow, \emph{i.e.}
 \]
 also commutes, since $\mc{C}$ is a category.
 \end{xca}
+
+\begin{xca}
+A \emph{subcategory} $\mc{C}'$ of a category $\mc{C}$ consists of a collection
+of objects of $\mc{C}$, with morphisms $\Hom_{\mc{C}'}(A, B) \subseteq
+\Hom_{\mc{C}}(A, B)$ for all objects $A, B$ in $\opn{Obj}(\mc{C}')$, such that
+identities and compositions in $\mc{C}$ make $\mc{C}'$ into a category. A
+subcategory $\mc{C}'$ is \emph{full} if $\Hom_{\mc{C}'}(A, B) =
+\Hom_{\mc{C}}(A, B)$ for all $A, B$ in $\opn{Obj}(\mc{C}')$.
+
+We can construct a category of \emph{infinite sets} as follows. The objects of
+this category are all infinite sets from $\catname{Set}$, and morphisms from an
+infinite set $A$ to another infinite set $B$ are just the usual set-functions.
+Then, it is clear that this category is indeed a full subcategory of
+$\catname{Set}$.
+\end{xca}
