@@ -633,3 +633,34 @@ B)$ be a morphism.
     contradiction.
 \end{itemize}
 \end{xca}
+
+\begin{xca}
+Suppose $A \xrightarrow{f} B$ and $B \xrightarrow{g} C$ are both monomorphisms
+in a category $\mc{C}$. Let $Z$ be any object of $\mc{C}$, and let $\alpha',
+\alpha'': Z \to A$ be morphisms such that
+\begin{center}
+    $(g \circ f) \circ \alpha' = (g \circ f) \circ \alpha''$.
+\end{center}
+Then, $g \circ (f \circ \alpha') = g \circ (f \circ \alpha'')$, which implies
+$f \circ \alpha' = f \circ \alpha''$, which implies $\alpha' = \alpha''$. Hence,
+$g \circ f$ is a monomorphism. This demonstrates the composition of two
+monomorphisms is a monomorphism.
+
+Now, it is easy to check identity morphisms in $\mc{C}$ are monomorphisms. Thus,
+one can define a subcategory $\mc{C}_{\text{mono}}$ of a category $\mc{C}$ by
+taking the same objects as in $\mc{C}$ and defining
+$\Hom_{\mc{C}_{\text{mono}}}$ to be the subset of $\Hom_{\mc{C}}(A, B)$
+consisting of monomorphisms, for all objects $A, B$ of $\mc{C}$.\\
+
+(Epimorphisms) Suppose $A \xrightarrow{f} B$ and $B \xrightarrow{g} C$ are both
+epimorphisms in a category $\mc{C}$. Let $Z$ be any object of $\mc{C}$, and let
+$\beta', \beta'': C \to Z$ be morphisms such that
+\begin{center}
+    $\beta' \circ (g \circ f) = \beta'' \circ (g \circ f)$.
+\end{center}
+Then, $(\beta' \circ g) \circ f = (\beta'' \circ g) \circ f$, which implies
+$\beta' \circ g = \beta'' \circ g$, which implies $\beta' = \beta''$, thus
+showing $g \circ f$ is an epimorphism. In a manner similar to the one shown
+above, one can define a subcategory $\mc{C}_{\text{epi}}$ of a category
+$\mc{C}$.
+\end{xca}
