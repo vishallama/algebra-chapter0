@@ -601,3 +601,17 @@ we have $E$ \\
 So, the statement holds for $n+1$ as well, and hence, by induction, the
 statement holds for all naturals $n > 0$. And, we are done.
 \end{xca}
+
+\begin{xca}
+We claim if a set $S$ is endowed with an equivalence relation $\sim$, then the
+corresponding category $\mc{C}$ is a groupoid. Indeed, if $a \to b$ is a
+morphism in $\mc{C}$, then $a \sim b$, which (by symmetry) implies $b \sim a$.
+Thus, $b \to a$, and since there is at most one morphism from any object
+(element) to another, we must have
+\begin{align*}
+    a \to b \to a &= 1_a \\
+    b \to a \to b &= 1_b
+\end{align*}
+Hence, $a \to b$ is an isomorphism, for all elements $a, b \in S$, and thus,
+$\mc{C}$ is a groupoid.
+\end{xca}
