@@ -615,3 +615,21 @@ Thus, $b \to a$, and since there is at most one morphism from any object
 Hence, $a \to b$ is an isomorphism, for all elements $a, b \in S$, and thus,
 $\mc{C}$ is a groupoid.
 \end{xca}
+
+\begin{xca}
+Let $A, B$ be objects of a category $\mc{C}$, and let $f \in \Hom_{\mc{C}}(A,
+B)$ be a morphism.
+\begin{itemize}
+    \item Suppose $f$ has a right inverse, $g: B \to A$, say. Then, $f \circ g
+    = 1_B$. Assume $Z$ is an object of $\mc{C}$ and $\beta, \beta': B \to Z$
+    morphisms such that $\beta \circ f = \beta' \circ f$. Then, $\beta = \beta
+    \circ 1_B = \beta \circ (f \circ g) = (\beta \circ f) \circ g = (\beta'
+    \circ f) \circ g = \beta' \circ (f \circ g) = \beta' \circ 1_B = \beta'$,
+    thus showing $f$ is an epimorphism.
+    \item In $(\Z, \le)$, considered as a category, any morphism is an
+    epimorphism, but the same does not have a right inverse. For example, $1 \le
+    2$, \emph{i.e.} $1 \to 2$. But, if the latter were to have a right inverse,
+    then we would have $2 \to 1$, which would then imply $2 \le 1$, clearly a
+    contradiction.
+\end{itemize}
+\end{xca}
