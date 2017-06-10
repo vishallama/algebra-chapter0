@@ -563,3 +563,41 @@ The category $\mc{C}^{A, B}$ consists of the following pieces of data:
         \beta}$ follow from the composition and identity laws in $\mc{C}$.
     \end{itemize}
 \end{xca}
+
+\section{Morphisms}
+\begin{xca}
+Suppose $A_0 \xrightarrow{f_1} A_1 \xrightarrow{f_2} A_2 \xrightarrow{f_3}
+\ldots \xrightarrow{f_n} A_n$ is a sequence of $n > 0$ morphisms in a
+category $\mc{C}$. We claim any choice of placement of parentheses for $f_n
+f_{n-1} \ldots f_1$ equals
+\[(\ldots ((f_n f_{n-1}) f_{n-2}) \ldots) f_1.\]
+
+We use induction on $n$ to prove our claim.
+
+(Base cases) We note $f_1 = (f_1)$. And, also $f_2 f_1 = (f_2) f_1$. So the
+statement holds for $n = 1, 2$.
+
+(Inductive case) Suppose the statement holds for some $n > 1$. Now, consider
+the placement of parentheses for the expression $E = f_{n+1} f_n f_{n-1} \ldots
+f_1$. Any such choice will correspond to a representation of $E$ in the form
+$e e'$, where both $e$ and $e'$ contain at least one term. This also implies
+both $e$ and $e'$ contain at most $n$ terms. So, assume $e$ contains the terms
+$f_{n+1}, f_n, \ldots, f_i$ and $e'$ contains the terms $f_{i-1}, \ldots, f_1$
+for some $1 < i \le n + 1$. Then, by the inductive hypothesis,
+\begin{align*}
+    e &= (((f_{n+1} f_n) \ldots) f_i) \\
+    e' &= (f_{i-1}(\ldots (f_2 f_1)))
+\end{align*}
+Then, through repeated use of the associativity of morphisms under composition,
+we have $E$ \\
+\begin{tabular}{l l}
+    &= $e e'$ \\
+    &= $e (f_{i-1}(\ldots (f_2 f_1)))$ \\
+    &= $((((e f_{i-1}) f_{i-2}) f_{i-3}) \ldots) f_1$ \\
+    &= $(\ldots ((f_{n+1} f_n) f_{n-1}) \ldots) f_1$
+\end{tabular}
+~\\
+
+So, the statement holds for $n+1$ as well, and hence, by induction, the
+statement holds for all naturals $n > 0$. And, we are done.
+\end{xca}
