@@ -722,3 +722,69 @@ aforesaid condition, and hence, it is the product of $m$ and $n$. Similarly, it
 is easy to check $\lcm(m, n)$ is the coproduct of any two positive integers $m$
 and $n$.
 \end{xca}
+
+\begin{xca}
+Suppose $A' \cong A''$ and $B' \cong B''$, and further, $A' \cap B' = \emptyset$
+and $A'' \cap B'' = \emptyset$. Then, there exist isomorphisms $k: A' \to B'$
+and $l: B' \to B''$, say. We claim
+\[
+A' \xrightarrow{i_{A'}} A' \cup B' \xleftarrow{i_{B'}} B',
+\]
+where $i_{A'}, i_{B'}$ are inclusion functions, is the coproduct of $A'$ and
+$B'$.
+
+Toward that end, for any set $C$ and functions $A' \xrightarrow{f} C
+\xleftarrow{g} B'$, we define a function $h: A' \cup B' \to C$ by
+\[
+h(x) =
+    \begin{cases}
+        f(x) & \text{if } x \in A' \\
+        g(x) & \text{if } x \in B'
+    \end{cases}
+\]
+Then, it is easy to check the following diagram commutes:
+\[
+\begin{tikzcd}
+    & C & \\
+    A' \arrow[r, swap, "i_{A'}"]
+       \arrow[ur, "f"]
+       & A' \cup B' \arrow[u, swap, dashed, "h"]
+                    & B' \arrow[l, "i_{B'}"]
+                         \arrow[ul, swap, "g"]
+\end{tikzcd}
+\]
+Also, $h$ is necessarily the unique function $A' \cup B' \to C$ that makes the
+above diagram commute.
+
+We next verify
+\[
+A' \xrightarrow{k \circ i_{A'}} A'' \cup B'' \xleftarrow{l \circ i_{B'}} B'
+\]
+is also a coproduct of $A'$ and $B'$. Indeed, for any set $C$ and functions
+$A' \xrightarrow{f} C \xleftarrow{g} B'$, we define a function $h': A'' \cup B''
+\to C$ by
+\[
+h'(x) =
+    \begin{cases}
+        f \circ k^{-1}(x) & \text{if } x \in A'' \\
+        g \circ l^{-1}(x) & \text{if } x \in B''
+    \end{cases}
+\]
+It is, again, easy to check the following diagram commutes:
+\[
+\begin{tikzcd}
+    & C & \\
+    A' \arrow[r, swap, "k \circ i_{A'}"]
+       \arrow[ur, "f"]
+       & A'' \cup B'' \arrow[u, swap, dashed, "h'"]
+                    & B' \arrow[l, "l \circ i_{B'}"]
+                         \arrow[ul, swap, "g"]
+\end{tikzcd}
+\]
+Also, $h''$ is necessarily the unique function $A'' \cup B'' \to C$ that makes
+the above diagram commute.
+
+Thus, we see both $A' \cup B'$ and $A'' \cup B''$ along with their associated
+functions are coproducts of $A'$ and $B'$, and hence, we conclude they are
+isomorphic to each other.
+\end{xca}
