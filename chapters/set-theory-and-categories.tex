@@ -788,3 +788,37 @@ Thus, we see both $A' \cup B'$ and $A'' \cup B''$ along with their associated
 functions are coproducts of $A'$ and $B'$, and hence, we conclude they are
 isomorphic to each other.
 \end{xca}
+
+\begin{xca}
+Suppose $\mc{C}$ is a category and $A, B$ are objects of $\mc{C}$. Assume the
+products $A \leftarrow A \times B \to B$ and $B \leftarrow B \times A \to A$
+exist. Then, for all sets $C$ and functions $A \xleftarrow{f} C \xrightarrow{g}
+B$, there exists a unique function $\langle f, g \rangle: C \to A \times B$
+such that the following diagram commutes:
+\[
+\begin{tikzcd}
+    & C \arrow[ld, swap, "f"]
+        \arrow[rd, "g"]
+        \arrow[d, dashed, "\langle {f, g} \rangle"] & \\
+    A & A \times B \arrow[l]
+                   \arrow[r]
+                   & B
+\end{tikzcd}
+\]
+This implies there is a unique function $\langle g, f \rangle: C \to B \times A$
+such that the following diagram commutes:
+\[
+\begin{tikzcd}
+    & C \arrow[ld, swap, "g"]
+        \arrow[rd, "f"]
+        \arrow[d, dashed, "\langle {g, f} \rangle"] & \\
+    B & B \times A \arrow[l]
+                   \arrow[r]
+                   & A
+\end{tikzcd}
+\]
+We thus see both $A \leftarrow A \times B \to B$ and $B \leftarrow B \times A
+\to A$ satisfy the universal property for the product of $A$ and $B$. That is,
+they are both final objects in the corresponding category, and hence, by
+Proposition 5.4, they are isomorphic.
+\end{xca}
