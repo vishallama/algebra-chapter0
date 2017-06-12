@@ -852,3 +852,38 @@ A \times (B \times C)$ satisfies the aforesaid universal property, and so does
 $\langle \langle f, g \rangle, h \rangle: D \to (A \times B) \times C$. Hence,
 $A \times (B \times C)$ and $(A \times B) \times C$ are isomorphic.
 \end{xca}
+
+\begin{xca}
+(Product) Let $\mc{C}$ be a category, and let $\{ A_i \}_{i \in I}$ be a family
+of objects $A_i$ of $\mc{C}$ indexed by some set $I$. The product of the
+family of objects $A_i$ ($i \in I$) is an object
+\[
+\prod_{i \in I} A_i
+\]
+of $\mc{C}$ equipped with a family of morphisms
+\[
+p_j : \prod_{i \in I} A_i \to A_j \q (j \in I)
+\]
+such that, for all objects $Z$ and morphisms $q_j : Z \to A_j$ ($j \in I$),
+there exists a unique morphism $h: Z \to \prod_{i \in I} A_i$ such that
+\[
+p_j \circ h = q_j \q (j \in I)
+\]
+
+(Coproduct) The coproduct of the family of objects $A_i$ ($i \in I$) is an
+object
+\[
+\coprod_{i \in I} A_i
+\]
+of $\mc{C}$ equipped with a family of morphisms
+\[
+p_j : A_j \to \coprod_{i \in I} A_i \q (j \in I)
+\]
+such that, for all objects $Z$ and morphisms $q_j : A_j \to Z$ ($j \in I$),
+there exists a unique morphism $h: \coprod_{i \in I} A_i \to Z$ such that
+\[
+h \circ p_j = q_j \q (j \in I)
+\]
+
+These exist in $\catname{Set}$ if we assume the \emph{axiom of choice}.
+\end{xca}
