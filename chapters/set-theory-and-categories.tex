@@ -822,3 +822,33 @@ We thus see both $A \leftarrow A \times B \to B$ and $B \leftarrow B \times A
 they are both final objects in the corresponding category, and hence, by
 Proposition 5.4, they are isomorphic.
 \end{xca}
+
+\begin{xca}
+Let $\mc{C}$ be a category with products. For any three objects $A, B, C$ of
+$\mc{C}$, their product $A \times B \times C$ satisfies the following
+property:\\
+The product is equipped with morphisms $A \times B \times C \to A$, $A \times B
+\times C \to B$ and $A \times B \times C \to C$ such that, for all objects $D$
+and morphisms $f: D \to A$, $g: D \to B$ and $h: C \to C$, there is a unique
+morphism $\langle f, g, h \rangle: D \to A \times B \times C$, making the
+following diagram commute:
+\[
+\begin{tikzcd}
+    & D \arrow[ddl, swap, bend right, "f"]
+        \arrow[ddd, bend left, crossing over, "g", near end]
+        \arrow[ddr, bend left, "h"]
+        \arrow[d, swap, dashed, "\langle {f, g, h} \rangle"]
+        & \\
+    & A \times B \times C \arrow[dl]
+                          \arrow[dd]
+                          \arrow[dr, crossing over]
+                          & \\
+    A & & C \\
+    & B &
+\end{tikzcd}
+\]
+A routine check can verify $\langle f, \langle g, h \rangle \rangle: D \to
+A \times (B \times C)$ satisfies the aforesaid universal property, and so does
+$\langle \langle f, g \rangle, h \rangle: D \to (A \times B) \times C$. Hence,
+$A \times (B \times C)$ and $(A \times B) \times C$ are isomorphic.
+\end{xca}
