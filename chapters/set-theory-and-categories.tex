@@ -896,6 +896,47 @@ resp. $\sim_B$. Define a relation $\sim$ on $A \times B$ by setting
 \]
 We can easily check $\sim$ is an equivalence relation on $A \times B$.
 \begin{itemize}
-    \item
+    \item The composite of the first projection function $\pi_A: A \times B \to
+    A$ and the natural surjection $\pi_{\sim_A}: A \to A/{\sim_A}$ is a
+    function $A \times B \xrightarrow{\pi_{\sim_A} \circ \pi_A} A/{\sim_A}$.
+    Note, if $(a_1, b_1) \sim (a_2, b_2)$, then $a_1 \sim_A a_2$, and thus,
+    $\pi_{\sim_A} \circ \pi_A (a_1, b_1) = \pi_{\sim_A}(a_1) = [a_1]_{\sim_A}
+    = [a_2]_{\sim_A} = \pi_{\sim_A} \circ \pi_A (a_2, b_2)$. That is,
+    equivalent elements in $A \times B$ have the same image in $A/{\sim_A}$
+    under the map $\pi_{\sim_A} \circ \pi_A$. Therefore, by the universal
+    property of quotients, there exists a unique function $\varphi_A: A \times
+    B /{\sim} \to A/{\sim_A}$, given by
+    \[
+    \varphi_A([(a, b)]_{\sim}) = \pi_{\sim_A} \circ \pi_A (a, b)
+    \]
+    such that the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        A \times B /{\sim} \arrow[rr, "\varphi_A"]
+                           & & A/{\sim_A} \\
+        & & \\
+        & A \times B \arrow[uul, "\pi_{\sim_{A \times B}}"]
+                     \arrow[uur, swap, "\pi_{\sim_A} \circ \pi_A"]
+                     &
+    \end{tikzcd}
+    \]
+    Similarly, by the universal property of quotients, there exists a unique
+    function $\varphi_B: A \times B /{\sim} \to B/{\sim_B}$, given by
+    \[
+    \varphi_B([(a, b)]_{\sim}) = \pi_{\sim_B} \circ \pi_B (a, b)
+    \]
+    such that the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        A \times B /{\sim} \arrow[rr, "\varphi_B"]
+                           & & B/{\sim_B} \\
+    & & \\
+    & A \times B \arrow[uul, "\pi_{\sim_{A \times B}}"]
+                 \arrow[uur, swap, "\pi_{\sim_B} \circ \pi_B"]
+                 &
+    \end{tikzcd}
+    \]
+    The above, thus, demonstrates there are functions $A \times B /{\sim} \to
+    A/{\sim_A}$ and $A \times B /{\sim} \to B/{\sim_B}$.
 \end{itemize}
 \end{xca}
