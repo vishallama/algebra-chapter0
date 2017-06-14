@@ -988,3 +988,38 @@ We can easily check $\sim$ is an equivalence relation on $A \times B$.
     \]
 \end{itemize}
 \end{xca}
+
+\begin{xca}
+Let $\mc{C}$ be a category, and let $X \xrightarrow{\alpha} Z \xleftarrow{\beta}
+Y$ be two fixed morphisms in $\mc{C}$.
+
+Then, the \emph{fibered product} of $\alpha$ and $\beta$ is a final object
+$\xleftarrow{f} P \xrightarrow{g} Y$ in the category $\mc{C}_{\alpha, \beta}$.
+That is, for all objects $X \xleftarrow{f_1} Q \xrightarrow{g_1} Y$ that makes
+the following diagram commute
+\[
+\begin{tikzcd}
+    Q \arrow[ddr, swap,  bend right, "f_1"]
+      \arrow[drr, bend left, "g_1"]
+      & & \\
+    & & Y \arrow[d, "\beta"] \\
+    & X \arrow[r, swap, "\alpha"]
+      & Z
+\end{tikzcd}
+\]
+there exists a unique morphism $h: Q \to P$ that makes the following diagram
+commute
+\[
+\begin{tikzcd}
+    Q \arrow[ddr, swap,  bend right, "f_1"]
+      \arrow[drr, bend left, "g_1"]
+      \arrow[dr, dashed, "h"]
+      & & \\
+    & P \arrow[r, "g"]
+        \arrow[d, swap, "f"]
+        & Y \arrow[d, "\beta"] \\
+    & X \arrow[r, swap, "\alpha"]
+        & Z
+\end{tikzcd}
+\]
+\end{xca}
