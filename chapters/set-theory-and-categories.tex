@@ -938,5 +938,48 @@ We can easily check $\sim$ is an equivalence relation on $A \times B$.
     \]
     The above, thus, demonstrates there are functions $A \times B /{\sim} \to
     A/{\sim_A}$ and $A \times B /{\sim} \to B/{\sim_B}$.
+
+    \item We now claim $A/{\sim_A} \xleftarrow{\varphi_A} A \times B /{\sim}
+    \xrightarrow{\varphi_B} B/{\sim_B}$ is the product of $A/{\sim_A}$ and
+    $B/{\sim_B}$.
+
+    To that end, suppose $C$ is any set, endowed with an equivalence relation
+    $\sim_C$. Let $A/{\sim_A} \xleftarrow{f} C \xrightarrow{g} B/{\sim_B}$ be
+    functions, such that, for all $c_1, c_2 \in C$,
+    \begin{center}
+        $c_1 \sim_C c_2 \implies f(c_1) = f(c_2)$ and $g(c_1) = g(c_2)$. \\
+    \end{center}
+
+    Now, define a function $h: C \to A \times B /{\sim}$ by
+    \begin{align*}
+        h(c) &= [(a, b)]_{\sim}, \text{ where} \\
+        f(c) &= [a]_{\sim_A} \text{ for some } a \in A, \text{ and} \\
+        g(c) &= [b]_{\sim_B} \text{ for some } b \in B.
+    \end{align*}
+    Then, $h$ is the unique function $C \to A \times B /{\sim}$ that makes the
+    following diagram commute:
+    \[
+    \begin{tikzcd}
+        & C \arrow[ddl, swap, "f"]
+            \arrow[ddr, "g"]
+            \arrow[dd, dashed, "h"]
+            & \\
+        & & \\
+        A/{\sim_A} & A \times B /{\sim} \arrow[l, "\varphi_A"]
+                                        \arrow[r, swap, "\varphi_B"]
+                                        & B/{\sim_B}
+    \end{tikzcd}
+    \]
+    We can easily verify, for all $c \in C$,
+    \begin{align*}
+        \varphi_A \circ h(c) &= \varphi_A([(a, b)]_{\sim}) \\
+                             &= \pi_{\sim_A} \circ \pi_A (a, b) \\
+                             &= \pi_{\sim_A}(a) \\
+                             &= [a]_{\sim_A} \\
+                             &= f(c)
+    \end{align*}
+    That is, $\varphi_A \circ h = f$. Similarly, it is easy to check
+    $\varphi_B \circ h = g$. Also, it is necessarily the case that $h$ as
+    defined is unique. Hence, our claim is proved.
 \end{itemize}
 \end{xca}
