@@ -1022,4 +1022,12 @@ commute
         & Z
 \end{tikzcd}
 \]
+
+In $\catname{Set}$, the fibered product of two functions $X \xrightarrow{\alpha}
+Z \xleftarrow{\beta} Y$ is the object
+\[
+X \xleftarrow{\pi_X} X \times_Z Y \xrightarrow{\pi_Y} Y,
+\]
+where $X \times_Z Y := \{ (x, y) \in X \times Y \mid \alpha(x) = \beta(y) \}$,
+and $\pi_X$ and $\pi_Y$ are the canonical projection functions.
 \end{xca}
