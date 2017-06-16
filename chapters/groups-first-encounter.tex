@@ -1,2 +1,21 @@
 % Chapter II: Groups, first encounter
 \chapter{Groups, first encounter}
+
+\section{Definition of group}
+\begin{xca}
+Let $(G, \bullet)$ be a group with $e$ denoting the identity element of $G$. We
+construct a category $\mc{C}$ as follows:
+\begin{itemize}
+    \item $\opn{Obj}(\mc{C}) := \{ \ast \}$.
+    \item $\Hom_{\mc{C}}(\ast, \ast) := G$.
+    \item $1_{\ast} = e$.
+\end{itemize}
+Then, it is easy to check $\mc{C}$ is indeed a category. Also, since every
+element $g \in G$ has an inverse, every morphism $\ast \to \ast$ has an inverse.
+That is, every morphism $\ast \to \ast$ is an isomorphism. Thus, $\mc{C}$ is a
+groupoid. Hence, we conclude every group is the group of isomorphisms of a
+groupoid (with a single object.)
+
+In particular, we note every group is the group of automorphisms of some object
+in some category.
+\end{xca}
