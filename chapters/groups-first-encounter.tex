@@ -78,4 +78,50 @@ there is only one multiplication table for $G$: $a b = 1_G, a a = b, b b = a$.
 The above thus shows there is only \emph{one} possible multiplication table for
 $G$ if $G$ has exactly 1, 2, or 3 elements.
 
+($G$ has four elements) Let these distinct elements be $1_G, a, b, c$. There
+are two possible choices for $ab$: $ab = 1_G$, or $ab = c$. Other choices for
+$ab$, \emph{viz.} $a$, or $b$, lead to contradictions. The two choices are:
+\begin{itemize}
+    \item ($ab = 1_G$) Now, $ac \neq c$, for otherwise, we get $a = 1_G$, a
+    contradiction. So, we must have $ac = b$, and thus, $aa = c$. Once we fill
+    in the (partially-completed) multiplication table with the above data, we
+    can fill in the rest of the multiplication table as follows. We can't have
+    $ba = b$, so we must have $ba = 1_G$, and hence, $ca = b$. Then, $bb = c$,
+    and $cb = a$, which forces $bc = a$, and $cc = 1_G$.
+
+    The completed multiplication table in this case is as follows:
+    \[
+    \begin{array}{c || c | c | c | c |}
+          & 1 & a & b & c \\
+        \hline \hline
+        1 & 1 & a & b & c \\
+        \hline
+        a & a & c & 1 & b \\
+        \hline
+        b & b & 1 & c & a \\
+        \hline
+        c & c & b & a & 1 \\
+        \hline
+    \end{array}
+    \]
+    A little bit of calculation shows $a^2 = c$, $a^3 = a^2 a = ca = b$, and
+    $a^4 = cc = 1_G$. Therefore, the above multiplication table can be entirely
+    rewritten in terms of $1_G$ and $a$ as follows:
+    \[
+    \begin{array}{c || c | c | c | c |}
+        & 1   & a   & a^2 & a^3 \\
+        \hline \hline
+        1   & 1   & a   & a^2 & a^3 \\
+        \hline
+        a   & a   & a^2 & a^3 & 1 \\
+        \hline
+        a^2 & a^2 & a^3 & 1   & a \\
+        \hline
+        a^3 & a^3 & 1   & a   & a^2 \\
+        \hline
+    \end{array}
+    \]
+    The above table is precisely the one for the \emph{cyclic group} $C_4$ of
+    order $4$.
+\end{itemize}
 \end{xca}
