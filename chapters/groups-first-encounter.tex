@@ -156,3 +156,27 @@ elements of $G$, if $G$ has exactly four elements.
 Using the tables above, it is also easy to verify all groups with $\le 4$
 elements are commutative.
 \end{xca}
+
+\begin{xca}
+(Prove Corollary 1.11) Let $g$ be an element of finite order, and let $N \in
+\Z$. We claim
+\[ g^N = e \iff N \text{ is a multiple of } |g|. \]
+
+Note, if $N = 0$, then the statement
+\[ g^0 = e \iff 0 \text{ is a multiple of } |g| \]
+holds, since both sides of the double implication are trivially true. Hence,
+the statement holds for $N = 0$.
+
+We now need prove our claim only for all $N \ne 0$.
+
+($\implies$) Suppose $g^N = e$, where $N \ne 0$. If $N > 0$, then by Lemma 1.10,
+$N$ is a multiple of $|g|$. And, if $N < 0$, then $g^{-N} = g^{-N} e = g^{-N}
+g^N = g^{-N + N} = g^0 = e$, and since $-N > 0$, again, by Lemma 1.10, $-N$ is
+a multiple of $|g|$. Hence, for all $N \ne 0$, $N$ is a multiple of $|g|$.
+
+($\impliedby$) Suppose $N$ is a multiple of $|g|$, where $N \ne 0$. Then, $N =
+n |g|$, for some $0 \ne n \in \Z$. Therefore, $g^N = g^{n|g|} = (g^{|g|})^n =
+e^n = e$.
+
+Hence, our original claim is proved.
+\end{xca}
