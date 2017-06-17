@@ -123,5 +123,36 @@ $ab$, \emph{viz.} $a$, or $b$, lead to contradictions. The two choices are:
     \]
     The above table is precisely the one for the \emph{cyclic group} $C_4$ of
     order $4$.
+
+    \item ($ab = c$) The elements of the group are $1, a, b$, and $ab$. There
+    are two possible choices for $a^2$: $1$, or $b$. If $a^2 = b$, then we
+    have $b = a^2, ab = a^3$, which reduces to the previous case above. So, we
+    are left with the only case to consider: $a^2 = 1$. Then, this forces
+    $a(ab) = b$. Now, if $b^2 = a$, then this again reduces to the previous
+    case above (up to isomorphism.) So, we are left with only one case to
+    consider: $b^2 = 1$. Therefore, $b(ab) = a$. Filling up the rest of the
+    multiplication table, we finally obtain $(ab)a = b, (ab)b = a$, and $(ab)^2
+    = 1$.
+
+    So, the completed multiplication table looks as follows:
+    \[
+    \begin{array}{c || c | c | c | c |}
+           & 1  & a  & b  & ab \\
+        \hline \hline
+        1  & 1  & a  & b  & ab \\
+        \hline
+        a  & a  & 1  & ab & b \\
+        \hline
+        b  & b  & ab & 1  & a \\
+        \hline
+        ab & ab & b  & a  & 1 \\
+        \hline
+    \end{array}
+    \]
 \end{itemize}
+Hence, we conclude there are \emph{two} distinct tables, up to reordering the
+elements of $G$, if $G$ has exactly four elements.
+
+Using the tables above, it is also easy to verify all groups with $\le 4$
+elements are commutative.
 \end{xca}
