@@ -226,3 +226,24 @@ Using Proposition 1.13, we have
 \end{align*}
 We thus conclude $|g^2| = |g|$.
 \end{xca}
+
+\begin{xca}
+We claim for all $g, h$ in a group $G$, $|gh| = |hg|$.
+
+To that end, we first prove the following ancillary claim:
+\[ |aga^{-1}| = |g| \text{ for all } a, g \in G. \]
+
+Indeed, suppose $a, g$ are elements of a group $G$, and let $|g| = n$, where
+$n \in \Z^+$. Then, $(aga^{-1})^n = \underbrace{(aga^{-1}) \cdots
+(aga^{-1})}_{n \text{ times}} = a g^n a^{-1} = a 1_G a^{-1} = aa^{-1} = 1_G$.
+
+So, $m = |aga^{-1}|$ divides $n$. Now, suppose $m < n$. Then, $(aga^{-1})^m =
+1_G = (aga^{-1})^n$, which implies $a g^m a^{-1} = a g^n a^{-1}$, which by
+cancellation, $g^m = g^n$, which implies $g^{n-m} = 1_G$, which (since
+$n-m < n$) contradicts the assumption $|g| = n$. Therefore, $|aga^{-1}| = n =
+|g|$, which proves our ancillary claim.
+
+Now, using the previous result, we immediately conclude, for all $g, h$ in a
+group $G$, $|gh| = |gh1_G| = |gh(gg^{-1})| = |g(hg)g^{-1}| = |hg|$, and we are
+done.
+\end{xca}
