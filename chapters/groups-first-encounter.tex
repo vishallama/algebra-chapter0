@@ -261,4 +261,45 @@ In the group of invertible $2 \times 2$ matrices, consider
         -1 & -1 \end{array} \right)$.
 \end{center}
 We verify below $|g| = 4, |h| = 3$, and $|gh| = \infty$.
+
+It is easy to verify
+\begin{center}
+    $g^2 = \left( \begin{array}{cc}
+               -1 & 0 \\
+                0 & -1 \end{array} \right)$,
+    $g^3 = \left( \begin{array}{cc}
+        0 & 1 \\
+        -1 & 0 \end{array} \right)$, and
+    $g^4 = \left( \begin{array}{cc}
+        1 & 0 \\
+        0 & 1 \end{array} \right)$.
+\end{center}
+Therefore, $|g| = 4$.
+
+Again, it is easy to verify
+\begin{center}
+    $h^2 = \left( \begin{array}{cc}
+               -1 & -1 \\
+                1 & 0 \end{array} \right)$, and
+    $h^3 = \left( \begin{array}{cc}
+               1 & 0 \\
+               0 & 1 \end{array} \right)$.
+\end{center}
+Therefore, $|h| = 3$. \\
+
+Now, note
+\[
+gh = \left( \begin{array}{cc}
+          1 & 1 \\
+          0 & 1 \end{array} \right).
+\]
+Using induction on $n$, it is easy to show
+\[
+(gh)^n = \left( \begin{array}{cc}
+             1 & n \\
+             0 & 1 \end{array} \right),
+\]
+for all $n \in \Z^+$. Therefore, $(gh)^n \neq I_n$ for any positive integer
+$n$, where $I_n$ is the $n \times n$ (identity) diagonal matrix. Hence, $|gh| =
+\infty$.
 \end{xca}
