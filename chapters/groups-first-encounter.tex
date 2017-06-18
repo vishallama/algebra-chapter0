@@ -190,3 +190,27 @@ that is not $f$. And, since the elements of the group commute, every
 and all these pairs reduce to $1_G$, except $f$. Hence, $\prod_{g \in G} g =
 f$.
 \end{xca}
+
+\begin{xca}
+Let $G$ be a finite group, of order $n$, and let $m$ be the number of elements
+$g \in G$ of order exactly $2$. We claim $n-m$ is odd.
+
+First, note the identity element is the only element in a group with order $1$.
+Also, it is easy to check, for all non-identity elements $g \in G$,
+\[ |g| = 2 \iff g = g^{-1}. \] That is, elements with order $2$ are precisely
+the elements that are their own inverses (not counting the identity element.)
+This implies elements $g$ with order $> 2$ have inverses that are distinct from
+themselves. Thus, these elements come in pairs, which all have distinct
+components. So,
+\begin{align*}
+    |G| &= \sum_{|g| \in \Z^+} \text{ \# of elements with order } |g| \\
+        &= \sum_{|g| = 1} \bullet + \sum_{|g| = 2} \bullet + \sum_{|g| > 2}
+        \bullet \\
+        &= 1 + m + 2k,
+\end{align*}
+for some $k \in \N$. Therefore, $n - m = 2k + 1$, showing $n-m$ is indeed odd.
+
+In addition, if $n$ is even, then using the previous equation, it is easy to
+see $m = n - 2k + 1$ is odd, and hence $G$ necessarily contains elements of
+order 2.
+\end{xca}
