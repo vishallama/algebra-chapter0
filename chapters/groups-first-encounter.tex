@@ -311,3 +311,26 @@ Therefore, $\lcm(|g|, |h|) = \lcm(4, 4) = 4$. And, $|gh| = |aa^3| = |a^4| =
 |e| = 1$. Also, $g$ and $h$ commute. Thus, we have an example wherein $g, h$
 commute but $|gh| = 1 \ne 4 = \lcm(|g|, |h|)$.
 \end{xca}
+
+\begin{xca}
+Suppose $g$ and $h$ commute \emph{and} $\gcd(|g|, |h|) = 1$. We claim $|gh| =
+|g||h|$.
+
+To that end, let $m = |g|$ and $n = |h|$, so that $\gcd(m, n) = 1$. By
+Proposition 1.14, $|gh|$ divides $\lcm(|g|, |h|) = \lcm(m, n) = mn/\gcd(m, n) =
+mn/1 = mn$. Let $N = |gh|$. So, $N \mid mn$.
+
+Now, $(gh)^N = 1$
+\begin{align*}
+    &\implies g^N = (h^{-1})^N \\
+    &\implies |g^N| = |(h^{-1})^N| \\
+    &\implies |g^N| = |h^N| \\
+    &\implies \frac{|g|}{\gcd(N, |g|)} = \frac{|h|}{\gcd(N, |h|)} \\
+    &\implies \frac{m}{\gcd(N, m)} = \frac{n}{\gcd(N, n)} \\
+    &\implies m \cdot \gcd(N, n) = n \cdot \gcd(N, m)
+\end{align*}
+Since $\gcd(m, n) = 1$, it follows $m \mid \gcd(N, m)$ and $n \mid \gcd(N, n)$.
+And, since $\gcd(N, m) \mid N$ and $ \gcd(N, n) \mid N$, it follows $m \mid N$
+and $n \mid N$, whence $mn \mid N$. But, $N \mid mn$, and so, $N = mn$. Thus,
+$|gh| = N = mn = |g||h|$, and this proves our claim.
+\end{xca}
