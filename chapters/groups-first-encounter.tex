@@ -338,3 +338,41 @@ $|gh| = N = mn = |g||h|$, and this proves our claim.
 \begin{xca}
 %TODO: Chapter II - Exercise 1.15
 \end{xca}
+
+\section{Examples of groups}
+\begin{xca}
+One can associate an $n \times n$ matrix $M_{\sigma}$ with a permutation
+$\sigma \in S_n$ by letting the entry at $(i, (i)\sigma)$ be $1$ and letting
+all other entries be 0. For example, the matrix corresponding to the
+permutation
+\[
+\sigma =
+    \begin{pmatrix}
+        1 & 2 & 3 \\
+        3 & 1 & 2
+    \end{pmatrix}
+        \in S_3
+\]
+would be
+\[
+M_{\sigma} =
+    \begin{pmatrix}
+        0 & 0 & 1 \\
+        1 & 0 & 0 \\
+        0 & 1 & 0
+    \end{pmatrix}.
+\]
+We show that, with this notation, \[ M_{\sigma \tau} = M_{\sigma} M_{\tau} \]
+for all $\sigma, \tau \in S_n$, where the product on the right is the ordinary
+product of matrices.
+
+First, note $\sigma \tau \in S_n$, and so, $M_{\sigma \tau}$ is an $n \times n$
+matrix where the entry at $(i, (i)\sigma \tau)$ is $1$ and all other entries is
+$0$. And, $M_{\sigma} M_{\tau}$ is an $n \times n$ matrix whose entry at
+$(i, j)$ equals \[ \sum_{r=1}^{n} (M_{\sigma})_{i,r} (M_{\tau})_{r,j}, \] which
+equals $1$ (otherwise, $0$) iff $(M_{\sigma})_{i,r} = 1 = (M_{\tau})_{r,j}$ for
+some $1 \le r \le n$ iff $(i)\sigma = r$ and $(r)\tau = j$ for some $1 \le r \le
+n$ iff $((i)\sigma) \tau = j$ iff $(i)(\sigma \tau) = j$ iff the entry at
+$(i, (i)\sigma \tau)$ of $M_{\sigma \tau}$ equals $1$ and all other entries is
+$0$. We thus conclude $M_{\sigma \tau} = M_{\sigma} M_{\tau}$, and we are done.
+\end{xca}
