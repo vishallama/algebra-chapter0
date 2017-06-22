@@ -409,3 +409,19 @@ $n+i$ is mapped to itself, for all positive integers $i \ge 1$.
 \begin{xca}
 %TODO - Chapter II: Ex 2.8
 \end{xca}
+
+\begin{xca}
+We verify `congruence mod $n$' is an equivalence relation. Indeed, let $n$ be a
+positive integer.
+
+(Reflexivity) For all $a \in \Z$, $n \mid (a - a)$, and so, $a \equiv a \mod n$.
+
+(Symmetry) For all $a, b \in \Z$, if $a \equiv b \mod n$, then $n \mid (b - a)$,
+which implies $n \mid (a - b)$, and thus, $b \equiv a \mod n$.
+
+(Transitivity) For all $a, b, c \in \Z$, if $a \equiv b \mod n$ and $b \equiv c
+\mod n$, then $n \mid (b - a)$ and $n \mid (c - b)$, and since $c - a = (c - b)
++ (b - a)$, $n \mid (c - a)$, and so, $a \equiv c \mod n$.
+
+And, we are done.
+\end{xca}
