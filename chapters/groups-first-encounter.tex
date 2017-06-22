@@ -425,3 +425,20 @@ which implies $n \mid (a - b)$, and thus, $b \equiv a \mod n$.
 
 And, we are done.
 \end{xca}
+
+\begin{xca}
+We claim $\Z/{n\Z}$ consists precisely of $n$ elements, for all positive
+integers $n$.
+
+Indeed, suppose $n$ is a positive integer. First, note the $n$ equivalence
+classes \[ [0]_n, [1]_n, \ldots, [n-1]_n \] are all distinct, for if $[i]_n =
+[j]_n$ for some $0 \le i < j < n$, then $n \mid (j-i)$, a contradiction, since
+$0 < j-i < n$.
+
+Next, note for any $a \in \Z$, by the Euclidean algorithm, $a = qn + r$, for
+some $q, r \in \Z$, where $0 \le r < n$. That is, $n \mid (a-r)$, and so,
+$a \equiv r \mod n$, and thus, $[a]_n = [r]_n$. That is to say, the equivalence
+class of any integer equals one of the $n$ equivalence classes stated above.
+
+Hence, we conclude $\Z/{n\Z}$ consists precisely of $n$ elements.
+\end{xca}
