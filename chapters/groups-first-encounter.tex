@@ -494,3 +494,17 @@ Conversely, suppose $am + bn = 1$ for some integers $a$ and $b$. Then, since
 $\gcd(m, n)$ divides both $m$ and $n$, $\gcd(m, n) \mid am + bn = 1$. This
 forces $\gcd(m, n) = 1$, and we are done.
 \end{xca}
+
+\begin{xca}
+(Analog of Lemma 2.2) If $a \equiv a' \mod n$ and $b \equiv b' \mod n$, then
+\[ ab \equiv a'b' \mod n. \]
+
+(Proof) Suppose $a \equiv a' \mod n$ and $b \equiv b' \mod n$. Then, $n \mid
+a' - a$ and $n \mid b' - b$, and since $a'b' - ab = a'(b' - b) + b(a' - a)$,
+$n \mid a'b - ab$, which implies $ab \equiv a'b' \mod n$. And, this completes
+our proof.
+
+The above statement shows if $[a]_n = [a']_n$ and $[b]_n = [b']_n$, then
+$[ab]_n = [a'b']_n$, thus showing the multiplication on $\Z/{n\Z}$ is a
+well-defined operation.
+\end{xca}
