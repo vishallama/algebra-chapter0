@@ -481,3 +481,16 @@ We obtain a similar result if we assume $c$ is a negative integer. Hence, we
 conclude there do not exist nonzero integers $a, b, c$, such that $a^2 + b^2 =
 3c^2$.
 \end{xca}
+
+\begin{xca}
+Suppose $\gcd(m, n) = 1$. Then, by Corollary 2.5, the class $[m]_n$ generates
+$\Z/{n\Z}$. Therefore, there exists some $a \in \Z$ such that $a[m]_n = [1]_n$,
+which implies $[am]_n = [1]_n$, and thus, $am \equiv 1 \mod n$, which implies
+$n \mid am - 1$. Therefore, there exists some integer $k$ such that $am - 1 =
+kn$, and thus, $am + (-k)n = 1$. We thus conclude there exist integers $a$ and
+$b = -k$ such that $am + bn = 1$.
+
+Conversely, suppose $am + bn = 1$ for some integers $a$ and $b$. Then, since
+$\gcd(m, n)$ divides both $m$ and $n$, $\gcd(m, n) \mid am + bn = 1$. This
+forces $\gcd(m, n) = 1$, and we are done.
+\end{xca}
