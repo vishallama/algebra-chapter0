@@ -451,3 +451,33 @@ equals $[1]_8, [3]_8, [5]_8$, or $[7]_8$. But, $[1]_8^2 = [3]_8^2 = [5]_8^2 =
 [7]_8^2 = [1]_8$, which implies $[a]_8^2 = [1]_8$, and hence, $a^2 \equiv 1 \mod
 8$, and we are done.
 \end{xca}
+
+\begin{xca}
+We show there are no \emph{nonzero} integers $a, b, c$ such that $a^2 + b^2 =
+3c^2$.
+
+To that end, we study the solutions to the equation $[a]_4^2 + [b]_4^2 =
+3[c]_4^2$ in $\Z/{4\Z}$. First, note $[0]_4^2 = [0]_4, [1]_4^2 = [1]_4, [2]_4^2
+= [0]_4$, and $[3]_4^2 = [1]_4$. This implies $3[c]_4^2$ equals $[0]_4$ or
+$[3]_4$. Thus, any solutions to the equation above exist only when $[a]_4^2 +
+[b]_4^2 = [0]_4 = 3[c]_4^2$, and this is possible precisely when $a, b, c$ are
+all even.
+
+Now, assume, for the sake of contradiction, triples $(a, b, c)$ (where $a, b,
+c$ are all nonzero) exist that are solutions to the original equation $a^2 +
+b^2 = 3c^2$. Then, from the foregoing argument, $a, b, c$ must all be even. Let
+us restrict our attention, for the moment, only to positive integer solutions
+$c$. Using the well-ordering principle, there must exist a smallest $c$, such
+that with the corresponding $a$ and $b$, the triple $(a, b, c)$ is a solution
+to the original equation. Now, let $a = 2k, b = 2l$, and $c = 2m$, for some
+integers $k, l, m$. Therefore, $(2k)^2 + (2l)^2 = 3(2m)^2$, which implies
+$k^2 + l^2 = 3m^2$, which is of the same form as the original equation. But,
+this implies there exists some triple $(k, l, m)$ that is a solution to the
+original equation, where $m = c/2 < c$, thus contradicting the assumption that
+$c$ is the smallest positive integer such that $(a, b, c)$ (for some $a, b$) is
+a solution to the original equation.
+
+We obtain a similar result if we assume $c$ is a negative integer. Hence, we
+conclude there do not exist nonzero integers $a, b, c$, such that $a^2 + b^2 =
+3c^2$.
+\end{xca}
