@@ -508,3 +508,15 @@ The above statement shows if $[a]_n = [a']_n$ and $[b]_n = [b']_n$, then
 $[ab]_n = [a'b']_n$, thus showing the multiplication on $\Z/{n\Z}$ is a
 well-defined operation.
 \end{xca}
+
+\begin{xca}
+Let $n > 0$ be an odd integer.
+\begin{itemize}
+\item We show if $\gcd(m, n) = 1$, then $\gcd(2m + n, 2n) = 1$. We prove the
+contrapositive of our claim. Indeed, suppose $\gcd(2m + n, 2n) = d \ne 1$. Then,
+$d \mid 2m + n$ and $d \mid 2n$. Now, since $n$ is an odd integer, $2m + n$ is
+odd and $2n$ is even. Therefore, $d$ must be an odd integer, and since $d$ and
+$2$ are relatively prime, $d \mid n$. In addition, $d \mid 2m$, which implies
+$d \mid m$, and since $\gcd(m, n) \ge d$, $\gcd(m, n) \ne 1$, and we are done.
+\end{itemize}
+\end{xca}
