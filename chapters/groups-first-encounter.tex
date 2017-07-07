@@ -561,3 +561,16 @@ $[1238237]_{10}^{4 \cdot 4559614} = [1]_{10}^{4559614}$. That is,
 $[1238237]_{10}^{18238456} = [1]_{10}$. Hence, $1238237^{18238456} \equiv 1
 \mod 10$, whence the last digit of $1238237^{18238456}$ is $1$.
 \end{xca}
+
+\begin{xca}
+Suppose $m \equiv m' \mod n$. Then, $[m]_n = [m']_n$
+\begin{align*}
+&\implies m \cdot [1]_n = m' \cdot [1]_n \\
+&\implies |m \cdot [1]_n| = |m' \cdot [1]_n| \\
+&\implies \frac{|[1]_n|}{\gcd(m, |[1]_n|)} = \frac{|[1]_n|}{\gcd(m', |[1]_n|)}
+\q (\text{by Proposition 1.13}) \\
+&\implies \frac{n}{\gcd(m, n)} = \frac{n}{\gcd(m', n)} \\
+&\implies \gcd(m, n) = \gcd(m', n).
+\end{align*}
+Hence, $\gcd(m, n) = 1$ iff $\gcd(m', n) = 1$.
+\end{xca}
