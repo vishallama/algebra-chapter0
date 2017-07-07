@@ -523,5 +523,26 @@ $d \mid m$, and since $\gcd(m, n) \ge d$, $\gcd(m, n) \ne 1$, and we are done.
 $(r - n)$ is an even integer. Furthermore, there exist integers $a, b$ such that
 $ar + b(2n) = 1$, which implies \[ 2a\left(\frac{r - n}{2}\right) + (a + 2b)n =
 1. \] Therefore, $\gcd(\frac{r - n}{2}, n) = 1$, and we are done.
+
+\item We now show the function given by \[ [m]_n \mapsto [2m + n]_{2n} \] is a
+bijection between $(\Z/{n\Z})^*$ and $(\Z/{2n\Z})^*$.
+
+Indeed, note that since $\gcd(m, n) = 1$ implies $\gcd(2m + n, 2n) = 1$, the
+above mapping does define a function between $(\Z/{n\Z})^*$ and $(\Z/{2n\Z})^*$.
+
+(Injective) Suppose for any $[m_1]_n, [m_2]_n \in (\Z/{n\Z})^*$, $[2m_1 + n] =
+[2m_2 + n]$. Then, $2m_1 + n \equiv 2m_2 + n \mod 2n$, which implies $2n \mid
+(2m_2 + n) - (2m_1 + n)$, and thus, $2n \mid 2(m_2 - m_1)$, and so, $n \mid
+(m_2 - m_1)$, from which we conclude $m_1 \equiv m_2 \mod n$, and hence,
+$[m_1]_n = [m_2]_n$, thereby proving the aforesaid mapping is injective.
+
+(Surjective) Let $[2m + n]_{2n} \in (\Z/{2n\Z})^*$, where $m \in \Z$. Then,
+$\gcd(2m + n, 2n) = 1$, which, by one of the previous results, implies
+$\gcd(\frac{2m + n - n}{2}, n) = 1$, and thus, $\gcd(m, n) = 1$. Therefore,
+$[m]_n \in (\Z/{n\Z})^*$. Hence, $[m]_n$ in $(\Z/{n\Z})^*$ maps to
+$[2m + n]_{2n}$ in $(\Z/{2n\Z})^*$. Thus, the aforesaid function is surjective.
+
+Thus, from the foregoing arguments, it follows the defined function between
+$(\Z/{n\Z})^*$ and $(\Z/{2n\Z})^*$ is a bijection.
 \end{itemize}
 \end{xca}
